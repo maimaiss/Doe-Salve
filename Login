@@ -1,0 +1,121 @@
+import { StatusBar } from 'expo-status-bar';
+import { useEffect, useState } from 'react';
+import { FlatList } from 'react-native';
+import { StyleSheet, Text, View, Button, TextInput, TouchableOpacity } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import { Fontisto } from '@expo/vector-icons';
+import { Entypo } from '@expo/vector-icons';
+
+export default function App() {
+
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState(0);
+
+  return (
+
+    <View style={styles.container}>
+
+      <View style={styles.cabecalho}>
+        <View>
+          <Fontisto name="blood-drop" size={50} color="#B22222" />
+        </View>
+        <View>
+          <Text style={styles.texto}> Doe&Salve </Text>
+        </View>
+      </View>
+
+      <View style={styles.login}>
+        <Text style={styles.text}>Login</Text>
+
+        <View style={styles.caixa}>
+          <View style={styles.icons}>
+            <Entypo name="mail" size={15} color="black" />
+          </View>
+          <TextInput
+            style={styles.textInput}
+            placeholder='Email'
+            onChangeText={(textoDigitado) => (setEmail(textoDigitado))}
+          />
+        </View>
+
+        <View style={styles.caixa}>
+          <View style={styles.icons}>
+            <Entypo name="key" size={15} color="black" />
+          </View>
+          <TextInput
+            style={styles.textInput}
+            placeholder='Senha'
+            onChangeText={(textoDigitado) => (setSenha(textoDigitado))}
+          />
+        </View>
+
+        <View style={styles.botao}>
+          <Button
+            title={'Entrar'}
+            color='#B22222'
+          />
+        </View>
+      </View>
+
+
+      <StatusBar style='auto' />
+    </View>
+
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#f4f4f4',
+  },
+  login:{
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  texto: {
+    fontSize: 30,
+    color: '#B22222',
+    textAlign: 'center',
+    textAlignVertical: 'center',
+    fontWeight: 'bold',
+  },
+  cabecalho: {
+    flexDirection: 'row',
+    marginTop: 50,
+    padding: 15,
+    borderRadius: 10,
+    paddingRight: 0,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  textInput: {
+    fontSize: 16,
+  },
+  text: {
+    fontSize: 25,
+    padding: 5,
+    color: '#B22222'
+  },
+  botao: {
+    width: '50%',
+    marginTop: 10,
+    borderRadius: 50,
+  },
+  caixa: {
+    flexDirection: 'row',
+    borderWidth: 1,
+    width: '75%',
+    paddingVertical: 5,
+    borderRadius: 7,
+    opacity: 0.4,
+    margin: 6,
+  },
+  icons: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingLeft: 10,
+    paddingRight: 6,
+  }
+});
