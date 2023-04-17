@@ -1,0 +1,118 @@
+import { StatusBar } from 'expo-status-bar';
+import { useEffect, useState } from 'react';
+import { FlatList } from 'react-native';
+import { StyleSheet, Text, View, Button, TextInput, TouchableOpacity } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import { Fontisto } from '@expo/vector-icons';
+
+export default function App() {
+
+  return (
+
+    <View style={styles.container}>
+
+      <View style={styles.cabecalho}>
+        <View style={styles.icon}>
+          <Fontisto name="blood-drop" size={50} color="#B22222" />
+        </View>
+        <View>
+          <Text style={styles.texto}> Doe&Salve </Text>
+        </View>
+      </View>
+
+      <View style={styles.caixafrase}>
+        <Text style={styles.frase}>No Brasil, cerca de 3,5 milhões de pacientes necessitam de transfusões de sangue por ano.</Text>
+        <Text style={styles.frase}>A doação de uma pessoa pode salvar em média, 4 vidas.</Text>
+      </View>
+
+
+      
+
+      <View style={styles.caixaBotao}>
+      <View >
+        <Text style={styles.frasemot}>Você pode ser o próximo a salvar uma vida</Text>
+      </View>
+        <TouchableOpacity>
+          <Text style={styles.botaoLogin}>Tenho uma conta</Text>
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <Text style={styles.botaoCad}>Comece agora</Text>
+        </TouchableOpacity>
+      </View>
+
+      <StatusBar style='auto' />
+    </View>
+
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#f4f4f4',
+  },
+  texto: {
+    fontSize: 30,
+    color: '#B22222',
+    textAlign: 'center',
+    textAlignVertical: 'center',
+    fontWeight: 'bold',
+  },
+  cabecalho: {
+    flexDirection: 'row',
+    marginTop: 50,
+    padding: 15,
+    borderRadius: 10,
+    paddingRight: 0,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  frase: {
+    fontSize: 24,
+    color: '#f4f4f4',
+    textAlign: 'center',
+    textAlignVertical: 'center',
+    fontWeight: 'bold',
+    backgroundColor: '#B22222',
+    height: 150,
+    width: 400,
+    margin: 5,
+    borderRadius: 10,
+  },
+  caixafrase: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  frasemot: {
+    fontSize: 17,
+    textAlign: 'center',
+    textAlignVertical: 'center',
+    color: '#B22222',
+    fontWeight: 'bold',
+    paddingBottom: 85,
+  },
+  caixaBotao: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  botaoLogin: {
+    fontSize: 20,
+    color: '#B22222',
+    height: 50,
+    width: 350,
+    textAlign: 'center',
+    textAlignVertical: 'center',
+  },
+  botaoCad: {
+    fontSize: 20,
+    color: '#fff',
+    backgroundColor: '#B22222',
+    borderRadius: 20,
+    height: 50,
+    width: 350,
+    textAlign: 'center',
+    textAlignVertical: 'center',
+  }
+});
