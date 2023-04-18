@@ -11,3 +11,7 @@ Q3: Como seria o protótipo da solução? Que tipo de informação o aplicativo 
 Um aplicativo simples e direto para auxiliar na doação de sangue, contendo de acordo com seus dados pessoais os intervalos adequados para doação, além de cuidados que devem ser tomados antes e depois da doação, simplificando assim a vida das pessoas.
 As informações principais estarão disponibilizadas na home da aplicação da seguinte forma:
 Logo no inicio da tela centralizada e os seguintes botões: "Meu perfil", "Doar", "Minhas Doações", "O que fazer?" e "Opções" sendo cada opção clicável levando para outra tela de acordo com sua função.
+
+Alunos:  
+Maísa Souza dos Santos – 01508744 
+Emerson Aquino da Costa Filho - 01501853 
